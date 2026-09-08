@@ -13,7 +13,7 @@ import {
   SidebarFooter,
 } from "@/components/ui/sidebar"
 import { Separator } from "@/components/ui/separator"
-import { Home, Settings, Users, FileText, LogOut } from "lucide-react"
+import { Home, Settings, Users, FileText, LogOut, Package } from "lucide-react"
 import ProductPage from "./pages/product"
 
 const navItems = [
@@ -21,7 +21,7 @@ const navItems = [
   { id: "users", label: "Users", icon: Users },
   { id: "reports", label: "Reports", icon: FileText },
   { id: "settings", label: "Settings", icon: Settings },
-  { id: "product", label: "Products", icon: Settings },
+  { id: "product", label: "Products", icon: Package },
 ]
 
 function PageContent({ page }: { page: string }) {
