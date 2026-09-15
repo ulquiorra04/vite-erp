@@ -15,12 +15,14 @@ import {
 import { Separator } from "@/components/ui/separator"
 import { Home, Settings, Users, FileText, LogOut, Package } from "lucide-react"
 import ProductPage from "./pages/product"
+import CategoryPage from "./pages/category"
 
 const navItems = [
   { id: "home", label: "Home", icon: Home },
   { id: "users", label: "Users", icon: Users },
   { id: "reports", label: "Reports", icon: FileText },
   { id: "settings", label: "Settings", icon: Settings },
+  { id: "categories", label: "Categories", icon: Settings },
   { id: "product", label: "Products", icon: Package },
 ]
 
@@ -34,6 +36,8 @@ function PageContent({ page }: { page: string }) {
       return <div><h2 className="text-2xl font-semibold">Reports</h2><p className="text-muted-foreground mt-2">View reports here.</p></div>
     case "settings":
       return <div><h2 className="text-2xl font-semibold">Settings</h2><p className="text-muted-foreground mt-2">Adjust your settings here.</p></div>
+    case "categories":
+      return CategoryPage()
     case "product":
       return ProductPage()
     default:
