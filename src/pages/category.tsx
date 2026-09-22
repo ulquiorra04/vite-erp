@@ -1,6 +1,24 @@
+import DataTable from "@/components/table/data-table";
+import { categoryColumns, type Category } from "@/components/table/models/category";
 import { Badge } from "@/components/ui/badge";
 
+function getData(): Category[] {
+    return [
+        {
+            id: 1,
+            name: "IPTV"
+        },
+        {
+            id: 2,
+            name: "Receiver"
+        }
+    ];
+}
+
 export function CategoryPage () {
+
+    const data = getData();
+
     return (
         <div>
             <div className="grid grid-cols-4 gap-4">
@@ -13,6 +31,8 @@ export function CategoryPage () {
                     </div>
                 </div>
             </div>
+
+            <DataTable columns={categoryColumns} data={data} />
         </div>
     );
 }
